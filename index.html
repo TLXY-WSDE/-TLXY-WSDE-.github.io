@@ -11,7 +11,6 @@
             box-sizing: border-box;
             font-family: "微软雅黑", sans-serif;
         }
-        /* 页面整体背景 */
         body {
             background-color: #f5f7fa;
             min-height: 100vh;
@@ -19,7 +18,6 @@
             flex-direction: column;
             align-items: center;
         }
-        /* 顶部标题 */
         .header {
             width: 100%;
             padding: 30px 0;
@@ -29,7 +27,6 @@
             font-weight: bold;
             letter-spacing: 2px;
         }
-        /* 中央登录容器 */
         .login-box {
             width: 420px;
             height: 420px;
@@ -43,7 +40,6 @@
             gap: 30px;
             margin-top: 40px;
         }
-        /* 登录按钮样式 */
         .login-btn {
             width: 280px;
             height: 60px;
@@ -53,11 +49,11 @@
             font-weight: 500;
             cursor: pointer;
             transition: 0.3s;
+            color: white;
         }
-        /* 角色区分配色 */
-        .user { background-color: #3498db; color: white; }
-        .delivery { background-color: #2ecc71; color: white; }
-        .admin { background-color: #e74c3c; color: white; }
+        .user { background-color: #3498db; }
+        .delivery { background-color: #2ecc71; }
+        .admin { background-color: #e74c3c; }
         .login-btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
@@ -65,14 +61,13 @@
     </style>
 </head>
 <body>
-    <!-- 顶部标题 -->
     <div class="header">智能送货系统</div>
 
-    <!-- 中央登录方形区域 -->
     <div class="login-box">
-        <button class="login-btn user">用户登录</button>
-        <button class="login-btn delivery">送货员登录</button>
-        <button class="login-btn admin">管理人员登录</button>
+        <!-- 下面这三行就是点击跳转代码 -->
+        <button class="login-btn user" onclick="location.href='user_login.html'">用户登录</button>
+        <button class="login-btn delivery" onclick="location.href='delivery_login.html'">送货员登录</button>
+        <button class="login-btn admin" onclick="location.href='admin_login.html'">管理人员登录</button>
     </div>
 </body>
 </html>
